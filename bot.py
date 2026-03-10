@@ -9,6 +9,12 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 from contextlib import suppress
 import time
+from dotenv import load_dotenv
+
+load_dotenv()
+
+intents = discord.Intents.default()
+intents.message_content = True
 
 # ===== 1. 載入環境變數與 API 金鑰 =====
 ### 🔐 載入環境變數與金鑰

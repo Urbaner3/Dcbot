@@ -758,6 +758,7 @@ async def on_message(message):
                                     f"- 輸入 tokens: {input_tokens}\n"
                                     f"- 回應 tokens: {visible_tokens}\n"
                                     f"- 總 token: {total_tokens}"
+                                    f"- 輸入\"指令選單\" 產生指令說明"
                                     )
             except Exception as e:
                 print(f"[ASK_ERR] user={message.author.id} guild={message.guild.id if message.guild else 'dm'} {type(e).__name__}: {e}")
@@ -805,7 +806,8 @@ async def on_message(message):
                     f"📊 token 使用量：\n"
                     f"- 輸入 tokens: {input_tokens}\n"
                     f"- 回應 tokens: {output_tokens}\n"
-                    f"- 總 token: {total_tokens}"
+                    f"- 總 token: {total_tokens}\n"
+                    f"- 輸入\"指令選單\" 產生指令說明"
                 )
             except Exception as e:
                 error_msg = f"{type(e).__name__}: {str(e)}"
@@ -869,7 +871,8 @@ async def on_message(message):
                                     f"📊 token 使用量：\n"
                                     f"- 輸入 tokens: {input_tokens}\n"
                                     f"- 回應 tokens: {visible_tokens}\n"
-                                    f"- 總 token: {total_tokens}"
+                                    f"- 總 token: {total_tokens}\n"
+                                    f"- 輸入\"指令選單\" 產生指令說明"
                                     )
             except Exception as e:
                 print(f"[SUM_ERR] user={message.author.id} guild={message.guild.id if message.guild else 'dm'} source={source_id} target={summary_channel_id} {type(e).__name__}: {e}")
